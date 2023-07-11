@@ -49,7 +49,7 @@ export default {
     },
     methods: {
         addProduct: function () {
-            this.axios.post('http://127.0.0.1:8000/api/create/', {
+            this.axios.post('http://92.53.115.254:5000/api/create/', {
                 title: this.inputs[0].value,
                 description: this.inputs[1].value,
                 price: this.inputs[2].value,

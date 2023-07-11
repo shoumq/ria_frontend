@@ -50,7 +50,7 @@ export default {
     },
     methods: {
         getProductInfo: function () {
-            this.axios.get('http://127.0.0.1:8000/api/id/' + this.$route.params.id)
+            this.axios.get('http://92.53.115.254:5000/api/id/' + this.$route.params.id)
                 .then((response) => {
                     this.inputs[0].value = response.data.title
                     this.inputs[1].value = response.data.description
@@ -59,7 +59,7 @@ export default {
         },
 
         updateProduct: function () {
-            this.axios.patch('http://127.0.0.1:8000/api/edit/' + this.$route.params.id, {
+            this.axios.patch('http://92.53.115.254:5000/api/edit/' + this.$route.params.id, {
                 title: this.inputs[0].value,
                 description: this.inputs[1].value,
                 price: this.inputs[2].value,
@@ -70,7 +70,7 @@ export default {
         },
 
         deleteProduct: function () {
-            this.axios.delete('http://127.0.0.1:8000/api/delete/' + this.$route.params.id)
+            this.axios.delete('http://92.53.115.254:5000/api/delete/' + this.$route.params.id)
                 .then(() => {
                     window.location.href = '/'
                 })
