@@ -31,7 +31,7 @@ export default {
     },
     methods: {
         getProducts: function () {
-            this.axios.get('http://127.0.0.1:8000/api')
+            this.axios.get('http://92.53.115.254:5000/api')
                 .then((response) => {
                     this.products = response.data
                 })
