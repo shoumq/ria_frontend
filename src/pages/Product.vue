@@ -6,11 +6,11 @@
             <div class="form">
                 <div class="title">Добавить продукт</div>
                 <label v-for="(item, index) in inputs" :key="index" :for="item.id">{{ item.title }}
-                    <input type="text" :placeholder="item.placeholder" :id="item.id" v-model="inputs[index].value">
+                    <input type="text" :placeholder="item.placeholder" :id="item.id" v-model="inputs[index].value" :disabled="err == 'Product not found.'">
                 </label>
                 <div class="err">{{ err }}</div>
-                <button type="submit" class="btn" @click="updateProduct">Сохранить</button>
-                <button type="submit" class="btn" @click="deleteProduct">Удалить</button>
+                <button type="submit" class="btn" @click="updateProduct" v-if="err != 'Product not found.'">Сохранить</button>
+                <button type="submit" class="btn" @click="deleteProduct" v-if="err != 'Product not found.'">Удалить</button>
             </div>
         </div>
     </div>
