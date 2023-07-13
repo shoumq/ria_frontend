@@ -59,6 +59,9 @@ export default {
                     this.inputs[1].value = response.data.description
                     this.inputs[2].value = response.data.price
                 })
+                .catch((e) => {
+                    this.err = e.response.data.message;
+                })
         },
 
         updateProduct: function () {
