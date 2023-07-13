@@ -8,6 +8,7 @@
                 <label v-for="(item, index) in inputs" :key="index" :for="item.id">{{ item.title }}
                     <input type="text" :placeholder="item.placeholder" :id="item.id" v-model="inputs[index].value">
                 </label>
+                <div class="err">{{ err }}</div>
                 <button type="submit" class="btn" @click="updateProduct">Сохранить</button>
                 <button type="submit" class="btn" @click="deleteProduct">Удалить</button>
             </div>
@@ -46,6 +47,8 @@ export default {
                     value: ''
                 }
             ],
+
+            err: ''
         }
     },
     methods: {
@@ -66,6 +69,9 @@ export default {
             })
                 .then(() => {
                     window.location.href = '/'
+                })
+                .catch((e) => {
+                    this.err = e.response.data.message;
                 })
         },
 
