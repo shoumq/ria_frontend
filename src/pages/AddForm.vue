@@ -57,6 +57,9 @@ export default {
                 .then(() => {
                     window.location.href = '/'
                 })
+                .catch((e) => {
+                    console.log(e.response.data.message);
+                })
         }
     }
 }
