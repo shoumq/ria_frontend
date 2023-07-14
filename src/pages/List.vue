@@ -29,7 +29,7 @@ export default {
     methods: {
         getProducts: function () {
             if (this.$route.query.title) {
-                this.axios.get('http://92.53.115.254:5000/api/?title=' + this.$route.query.title)
+                this.axios.get('http://92.53.115.254:5000/api?title=' + this.$route.query.title)
                     .then((response) => {
                         this.products = response.data
                     })
