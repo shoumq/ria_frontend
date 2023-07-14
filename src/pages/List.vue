@@ -4,10 +4,7 @@
 
         <div class="container flex">
             <a :href="'/product/' + item.id" v-for="(item, index) in products" :key="index">
-                <Card
-                    :title="item.title"
-                    :description="item.description"
-                    :price="item.price">
+                <Card :title="item.title" :description="item.description" :price="item.price">
                 </Card>
             </a>
         </div>
@@ -31,10 +28,23 @@ export default {
     },
     methods: {
         getProducts: function () {
-            this.axios.get('http://92.53.115.254:5000/api')
-                .then((response) => {
-                    this.products = response.data
-                })
+            if (this.$route.query.title) {
+                this.axios.get('http://92.53.115.254:5000/api/?title=' + this.$route.query.title)
+                    .then((response) => {
+                        this.products = response.data
+                    })
+            } else {
+                this.axios.get('http://92.53.115.254:5000/api')
+                    .then((response) => {
+                        this.products = response.data
+                    })
+            }
+        }
+    },
+
+    watch: {
+        $route() {
+            this.getProducts();
         }
     },
 

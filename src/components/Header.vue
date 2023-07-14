@@ -1,11 +1,35 @@
 <template>
-  <header>
-    <div class="container">
-      <a href="/" class="title">Продукты</a>
-      <a href="/add" class="title item">Добавить товар</a>
-    </div>
-  </header>
+  <div>
+    <header>
+      <div class="container">
+        <a href="/" class="title">Продукты</a>
+        <a href="/add" class="title item">Добавить товар</a>
+
+        <div class="search">
+          <input type="text" placeholder="Самса" v-model="productTitle">
+          <button class="btn" @click="setParam">Найти</button>
+        </div>
+      </div>
+    </header>
+  </div>
 </template>
+
+
+<script>
+export default {
+  data() {
+    return {
+      productTitle: ''
+    }
+  },
+
+  methods: {
+    setParam: function () {
+      this.$router.push({ path: '/', query: { title: this.productTitle } })
+    }
+  }
+}
+</script>
 
 
 <style lang="sass" scoped>
@@ -39,4 +63,16 @@ header
   background-clip: text
   -webkit-background-clip: text
   -webkit-text-fill-color: transparent
+
+.search
+  display: flex
+  gap: 7rem
+
+  input
+    font-size: 14rem
+    padding: 2rem 5rem
+    border: 1rem solid #815cdb
+    outline: none
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px
+    border-radius: 5rem
 </style>
