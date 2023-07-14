@@ -5,10 +5,10 @@
         <a href="/" class="title">Продукты</a>
         <a href="/add" class="title item">Добавить товар</a>
 
-        <div class="search">
+        <form class="search" @submit.prevent="setParam">
           <input type="text" placeholder="Самса" v-model="productTitle">
-          <button class="btn" @click="setParam">Найти</button>
-        </div>
+          <button class="btn">Найти</button>
+        </form>
       </div>
     </header>
   </div>
