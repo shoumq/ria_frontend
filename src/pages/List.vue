@@ -4,8 +4,7 @@
 
         <div class="container flex">
             <a :href="'/product/' + item.id" v-for="(item, index) in products" :key="index">
-                <Card :title="item.title" :description="item.description" :price="item.price">
-                </Card>
+                <Card :title="item.title" :description="item.description" :price="item.price"></Card>
             </a>
         </div>
     </div>

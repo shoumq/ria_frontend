@@ -9,8 +9,8 @@
                     <input type="text" :placeholder="item.placeholder" :id="item.id" v-model="inputs[index].value" :disabled="err == 'Product not found.'">
                 </label>
                 <div class="err">{{ err }}</div>
-                <button type="submit" class="btn" @click="updateProduct" v-if="err != 'Product not found.'">Сохранить</button>
-                <button type="submit" class="btn" @click="deleteProduct" v-if="err != 'Product not found.'">Удалить</button>
+                <button type="submit" class="btn-p" @click="updateProduct" v-if="err != 'Product not found.'">Сохранить</button>
+                <button type="submit" class="btn-d" @click="deleteProduct" v-if="err != 'Product not found.'">Удалить</button>
             </div>
         </div>
     </div>
@@ -109,6 +109,7 @@ label
     display: flex
     justify-content: space-between
     align-items: center
+    color: #fff
 
     @media (max-width: 768px)
         font-size: 13rem
@@ -116,13 +117,13 @@ label
 .form
     border-radius: 10rem
     width: 400rem
-    background: #fff
     display: flex
     flex-direction: column
-    gap: 15rem
+    gap: 35rem
     padding: 25rem 30rem
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
     margin-inline: auto
+    background: #232222
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)
 
     @media (max-width: 768px)
         width: calc(100% - 70rem)
@@ -133,10 +134,13 @@ label
         padding: 3rem 8rem
         outline: none
         box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px
-        border: 1px solid transparent
+        border: 1px solid rgba(255, 255, 255, 0.50)
+        background: #232222
+        color: #fff
+        font-size: 13rem
 
-        &:focus
-            border: 1px solid #9a65c2
+        // &:focus
+        //     border: 1px solid #9a65c2
 
         @media (max-width: 768px)
             width: 150rem
@@ -148,6 +152,7 @@ label
     padding-bottom: 10rem
     border-bottom: 1rem solid #8f8f8f
     margin-bottom: 5rem
+    color: #fff
 
 .btn
     background: #9a65c2
@@ -164,4 +169,10 @@ label
 
     &:hover
         background: #7c32b3
+
+.btn-d
+    margin-top: -15rem
+
+.btn-p
+    margin-top: -30rem
 </style>

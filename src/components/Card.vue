@@ -3,6 +3,10 @@
         <div class="title">{{ title }}</div>
         <div class="desc">Описание: {{ description }}</div>
         <div class="desc">Цена: {{ price }}</div>
+
+        <div style="margin: auto; text-align: center">
+            <button class="btn-p">Изменить</button>
+        </div>
     </div>
 </template>
 
@@ -20,25 +24,34 @@ export default {
 
 <style lang="sass" scoped>
 .card
-    background: #fff
-    width: 200rem
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px
+    width: 250rem
     padding: 10rem 25rem
-    border-radius: 5rem
+    border-radius: 20rem
+    background: #232222
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)
 
     @media (max-width: 768px)
         width: 200rem
         margin: auto
 
 .title
-    font-size: 20rem
     display: flex
     justify-content: center
-    padding-bottom: 5rem
-    border-bottom: 1rem solid #8b8b8b
+    border-bottom: 1rem solid white
     margin-bottom: 15rem
-
+    color: #FFF
+    font-size: 20rem
+    font-style: normal
+    font-weight: 700
+    line-height: 19px
+    padding: 12rem 0
+    width: 100%
 .desc
     font-size: 13rem
-    padding-bottom: 4rem
+    padding-bottom: 12rem
+    color: #FFF
+
+.btn-p
+    width: 180rem
+    margin: 13rem 0
 </style>
