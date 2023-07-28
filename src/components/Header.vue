@@ -13,8 +13,8 @@
         </div>
 
         <div class="s">
-          <img src="@/images/i1.png" alt="">
-          <img src="@/images/i2.png" alt="">
+          <img src="@/images/i1.png" alt="" class="imgg">
+          <img src="@/images/i2.png" alt="" class="imgg">
         </div>
       </div>
     </header>
