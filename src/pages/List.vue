@@ -64,8 +64,7 @@ export default {
 <style lang="sass" scoped>
 .flex
     display: grid
-    gap: 50rem
-    grid-template-columns: repeat(4, 1fr)
+    grid-template-columns: repeat(2, 1fr)
 
     @media (max-width: 768px)
         display: flex

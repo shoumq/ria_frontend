@@ -105,7 +105,7 @@ export default {
     margin-inline: auto
 
 label
-    font-size: 17rem
+    font-size: 20rem
     display: flex
     justify-content: space-between
     align-items: center
@@ -115,8 +115,7 @@ label
         font-size: 13rem
 
 .form
-    border-radius: 10rem
-    width: 400rem
+    width: 750rem
     display: flex
     flex-direction: column
     gap: 35rem
@@ -129,15 +128,17 @@ label
         width: calc(100% - 70rem)
 
     input
-        border-radius: 5rem
-        width: 240rem
-        padding: 3rem 8rem
+        width: 500rem
+        padding: 3rem 15rem
         outline: none
         box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px
-        border: 1px solid rgba(255, 255, 255, 0.50)
         background: #232222
         color: #fff
         font-size: 13rem
+        font-size: 20rem
+
+        border-radius: 10rem
+        border: 1px solid rgba(255, 255, 255, 0.50)
 
         // &:focus
         //     border: 1px solid #9a65c2
@@ -146,13 +147,16 @@ label
             width: 150rem
 
 .title
-    font-size: 20rem
+    margin-top: 4rem
+    font-size: 24rem
     display: flex
     justify-content: center
     padding-bottom: 10rem
     border-bottom: 1rem solid #8f8f8f
     margin-bottom: 5rem
     color: #fff
+    font-weight: 700
+    line-height: 40rem
 
 .btn
     background: #9a65c2
@@ -171,8 +175,15 @@ label
         background: #7c32b3
 
 .btn-d
-    margin-top: -15rem
+    position: relative
+    top: -10rem
+    margin-top: -10rem
+    font-size: 20rem !important
+    margin: auto
+    width: calc(100% - 50rem)
 
 .btn-p
-    margin-top: -30rem
+    font-size: 20rem !important
+    margin: auto
+    width: calc(100% - 50rem)
 </style>

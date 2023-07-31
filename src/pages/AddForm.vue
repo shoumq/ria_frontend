@@ -141,4 +141,5 @@ label
 
 .btn-p
     margin-top: -20rem
+    font-size: 16rem
 </style>

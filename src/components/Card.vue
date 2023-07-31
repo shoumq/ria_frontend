@@ -24,11 +24,13 @@ export default {
 
 <style lang="sass" scoped>
 .card
-    width: 250rem
-    padding: 10rem 25rem
+    width: 225rem
+    padding: 10rem 105rem
     border-radius: 20rem
     background: #232222
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)
+    margin: auto
+    margin-bottom: 70rem
 
     @media (max-width: 768px)
         width: 200rem
@@ -38,17 +40,17 @@ export default {
     display: flex
     justify-content: center
     border-bottom: 1rem solid white
-    margin-bottom: 15rem
+    margin-bottom: 12rem
     color: #FFF
-    font-size: 20rem
+    font-size: 24rem
     font-style: normal
     font-weight: 700
     line-height: 19px
-    padding: 12rem 0
+    padding: 15rem 0
     width: 100%
 .desc
     font-size: 13rem
-    padding-bottom: 12rem
+    padding-bottom: 18rem
     color: #FFF
 
 .btn-p
